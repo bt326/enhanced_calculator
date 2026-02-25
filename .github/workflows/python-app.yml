@@ -26,6 +26,8 @@ jobs:
         pip install pytest pytest-cov pandas python-dotenv coverage
 
     - name: Run tests with coverage
+      env:
+        PYTHONPATH: .
       run: |
         pytest --cov=app
         coverage report --rcfile=.coveragerc --fail-under=100

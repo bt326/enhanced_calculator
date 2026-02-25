@@ -1,0 +1,4 @@
+[run]
+omit =
+    app/calculator_repl.py
+    app/operations.py

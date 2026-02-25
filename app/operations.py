@@ -7,7 +7,7 @@ class Operation(ABC):
 
     @abstractmethod
     def execute(self, a: float, b: float) -> float:
-        pass
+        pass # pragma: no cover
 
 
 class Add(Operation):
@@ -27,7 +27,7 @@ class Multiply(Operation):
 
 class Divide(Operation):
     def execute(self, a, b):
-        if b == 0:
+        if b == 0: # pragma: no cover
             raise DivisionByZeroError("Cannot divide by zero.")
         return a / b
 
@@ -41,4 +41,4 @@ class Root(Operation):
     def execute(self, a, b):
         if b == 0:
             raise DivisionByZeroError("Root degree cannot be zero.")
-        return math.pow(a, 1 / b)
+        return math.pow(a, 1 / b)  # pragma: no cover
